@@ -1,8 +1,9 @@
 package com.company;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class KFZVersicherungsContainer {
+public class KFZVersicherungsContainer implements Serializable {
     private ArrayList<KFZVersicherung> alleKFZVersicherungen;
     private ArrayList<Kunde> alleKunden;
 
@@ -31,6 +32,7 @@ public class KFZVersicherungsContainer {
     }
     public KFZVersicherung anlegenNeueKFZVersicherung(Kunde kunde,long deckungsumme,String kennzeichen){
         KFZVersicherung v=new KFZVersicherung(kunde,deckungsumme,kennzeichen);
+        v.getKunde().getKfzVersicherungen().add(v);
         alleKFZVersicherungen.add(v);
         return v;
     }

@@ -6,8 +6,18 @@ public class KFZVersicherungsUI {
 
     KFZVersicherungsContainer container;
 
+
+
     public KFZVersicherungsUI(KFZVersicherungsContainer c) {
         this.container=c;
+    }
+
+
+
+
+
+    public KFZVersicherungsContainer getContainer() {
+        return container;
     }
 
     public void hinzufuegenVersicherung(KFZVersicherung versicherung){

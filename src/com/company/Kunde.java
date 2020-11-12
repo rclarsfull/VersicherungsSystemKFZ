@@ -1,8 +1,9 @@
 package com.company;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Kunde {
+public class Kunde implements Serializable {
     private String name,vorname,geburtsDatum;
     private ArrayList<KFZVersicherung> kfzVersicherungen;
 
@@ -10,6 +11,7 @@ public class Kunde {
         this.vorname=vorname;
         this.name=name;
         this.geburtsDatum=geburtsDatum;
+        kfzVersicherungen=new ArrayList<KFZVersicherung>();
     }
 
     @Override
@@ -18,7 +20,6 @@ public class Kunde {
                 "name='" + name + '\'' +
                 ", vorname='" + vorname + '\'' +
                 ", geburtsDatum='" + geburtsDatum + '\'' +
-                ", kfzVersicherungen=" + kfzVersicherungen +
                 '}';
     }
 

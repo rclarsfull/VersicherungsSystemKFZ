@@ -1,6 +1,8 @@
 package com.company;
 
-public class KFZVersicherung {
+import java.io.Serializable;
+
+public class KFZVersicherung implements Serializable {
     String vNummer, amtlichesKennzeichen;
     KFZHaftpflicht haftpflicht;
     Autoschutzbrief autoschutzbrief;

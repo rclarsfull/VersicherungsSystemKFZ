@@ -1,6 +1,8 @@
 package com.company;
 
-public class KFZHaftpflicht {
+import java.io.Serializable;
+
+public class KFZHaftpflicht implements Serializable {
     private long deckungssumme;
     private int typklasse;
 

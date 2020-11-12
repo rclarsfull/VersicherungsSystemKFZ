@@ -1,6 +1,8 @@
 package com.company;
 
-public class Autoschutzbrief {
+import java.io.Serializable;
+
+public class Autoschutzbrief implements Serializable {
     private static double jahresgebuehr=100;
     private int weltweit;
 
