@@ -8,6 +8,13 @@ public class Autoschutzbrief {
         this.weltweit = weltweit;
     }
 
+    @Override
+    public String toString() {
+        return "Autoschutzbrief{" +
+                "weltweit=" + weltweit +
+                '}';
+    }
+
     public static double getJahresgebuehr() {
         return jahresgebuehr;
     }

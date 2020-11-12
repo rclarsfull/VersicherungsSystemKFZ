@@ -3,13 +3,23 @@ package com.company;
 import java.util.ArrayList;
 
 public class Kunde {
-    String name,vorname,geburtsDatum;
-    ArrayList<KFZVersicherung> kfzVersicherungen;
+    private String name,vorname,geburtsDatum;
+    private ArrayList<KFZVersicherung> kfzVersicherungen;
 
     Kunde (String vorname,String name,String geburtsDatum){
         this.vorname=vorname;
         this.name=name;
         this.geburtsDatum=geburtsDatum;
+    }
+
+    @Override
+    public String toString() {
+        return "Kunde{" +
+                "name='" + name + '\'' +
+                ", vorname='" + vorname + '\'' +
+                ", geburtsDatum='" + geburtsDatum + '\'' +
+                ", kfzVersicherungen=" + kfzVersicherungen +
+                '}';
     }
 
     public String getName() {
@@ -34,6 +44,14 @@ public class Kunde {
 
     public void setGeburtsDatum(String geburtsDatum) {
         this.geburtsDatum = geburtsDatum;
+    }
+
+    public ArrayList<KFZVersicherung> getKfzVersicherungen() {
+        return kfzVersicherungen;
+    }
+
+    public void setKfzVersicherungen(ArrayList<KFZVersicherung> kfzVersicherungen) {
+        this.kfzVersicherungen = kfzVersicherungen;
     }
 
     public void hinzufuegenVersicherung(KFZVersicherung versicherung){

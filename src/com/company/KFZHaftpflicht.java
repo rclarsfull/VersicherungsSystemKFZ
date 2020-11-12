@@ -8,6 +8,14 @@ public class KFZHaftpflicht {
         this.deckungssumme = deckungssumme;
     }
 
+    @Override
+    public String toString() {
+        return "KFZHaftpflicht{" +
+                "deckungssumme=" + deckungssumme +
+                ", typklasse=" + typklasse +
+                '}';
+    }
+
     public long getDeckungssumme() {
         return deckungssumme;
     }

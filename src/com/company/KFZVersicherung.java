@@ -5,13 +5,19 @@ public class KFZVersicherung {
     KFZHaftpflicht haftpflicht;
     Autoschutzbrief autoschutzbrief;
     Kunde kunde;
+    private static int auto=1000;
 
-    public KFZVersicherung(String vNummer, Kunde kunde,long deckungsumme) {
-        this.vNummer = vNummer;
-
+    public KFZVersicherung(Kunde kunde,long deckungsumme,String kennzeichen) {
+        auto++;
+        this.vNummer = "v"+auto;
         this.haftpflicht=new KFZHaftpflicht(deckungsumme);
-
+        this.amtlichesKennzeichen=kennzeichen;
+        this.kunde=kunde;
     }
+
+
+
+
 
     @Override
     public String toString() {
@@ -20,6 +26,7 @@ public class KFZVersicherung {
                 ", amtlichesKennzeichen='" + amtlichesKennzeichen + '\'' +
                 ", haftpflicht=" + haftpflicht +
                 ", autoschutzbrief=" + autoschutzbrief +
+                ", kunde=" + kunde +
                 '}';
     }
 
@@ -33,6 +40,14 @@ public class KFZVersicherung {
 
     public String getAmtlichesKennzeichen() {
         return amtlichesKennzeichen;
+    }
+
+    public Kunde getKunde() {
+        return kunde;
+    }
+
+    public void setKunde(Kunde kunde) {
+        this.kunde = kunde;
     }
 
     public void setAmtlichesKennzeichen(String amtlichesKennzeichen) {
